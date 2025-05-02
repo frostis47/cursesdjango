@@ -1,0 +1,13 @@
+{% autoescape off %}
+
+Тема: Активируйте свою учетную запись
+
+Здравствуйте, {{ user.username }},
+
+Пожалуйста, перейдите по следующей ссылке, чтобы активировать свою учетную запись:
+http://{{ domain }}{% url 'auth_users:activate_views' uidb64=uid token=token %}
+
+Спасибо,
+Команда Gtn.ru
+
+{% endautoescape %}
